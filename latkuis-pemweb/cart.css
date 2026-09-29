@@ -1,0 +1,188 @@
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    body {
+        background-color: #EEEEEE;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navbar {
+        background-color: #FFFFFF;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 70px;
+        border-bottom: 1px solid #DDDDDD;
+    }
+
+    .logo {
+        font-size: 15px;
+        font-weight: bold;
+        color: #000000;
+        letter-spacing: 5px;
+        cursor: pointer;
+    }
+
+    .nav-menu {
+        display: flex;
+        gap: 28px;
+        list-style: none;
+    }
+
+    .nav-menu li a {
+        text-decoration: none;
+        color: #000000;
+        font-size: 11px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        transition: color 0.3s ease;
+    }
+
+    .nav-menu li a:hover {
+        color: #777777;
+    }
+
+    .product-container {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 50px 20px;
+    }
+
+    .product-card {
+        background-color: #DDDDDD;
+        width: 620px;
+        padding: 20px;
+        max-width: 95%;
+        border-radius: 12px;
+        display: flex;
+        overflow: hidden;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.10);
+        transition: background-color 0.4s ease, transform 0.3s ease;
+    }
+
+    .product-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .product-image {
+        flex: 0 0 46%;
+        display: flex;
+        border-radius: 12px;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .product-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.4s ease;
+    }
+
+    .product-card:hover .product-image img {
+        transform: scale(1.06);
+    }
+
+    .product-info {
+        flex: 1;
+        padding: 30px 28px;
+    }
+
+    .product-category {
+        color: #777777;
+        font-size: 9px;
+        font-weight: bold;
+        letter-spacing: 3px;
+        margin-bottom: 10px;
+    }
+
+    .product-name {
+        color: #000000;
+        font-size: 21px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .product-desc {
+        color: #666666;
+        font-size: 11px;
+        line-height: 1.7;
+        margin-bottom: 16px;
+    }
+
+    .product-price {
+        color: #000000;
+        font-size: 17px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    .color-label {
+        font-size: 10px;
+        font-weight: bold;
+        color: #000000;
+        margin-bottom: 8px;
+    }
+
+    .color-options {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        margin-bottom: 22px;
+    }
+
+    .color-btn {
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        border: 2px solid rgba(0, 0, 0, 0.15);
+        cursor: pointer;
+        transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+
+    .color-btn:hover {
+        transform: scale(1.2);
+        border-color: #000000;
+    }
+
+    .color-btn.active {
+        border-color: #000000;
+        transform: scale(1.25);
+    }
+
+    .btn-black  { background-color: #000000; }
+    .btn-blue   { background-color: #8FAADC; }
+    .btn-cream  { background-color: #F5E6CC; }
+
+    .add-to-cart {
+        width: 100%;
+        background-color: #000000;
+        color: #FFFFFF;
+        border: none;
+        padding: 13px;
+        font-size: 11px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        border-radius: 7px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .add-to-cart:hover {
+        background-color: #444444;
+    }
+
+    @media (max-width: 640px) {
+        .navbar { padding: 16px 24px; }
+        .product-card { flex-direction: column; }
+        .product-image { flex: none; height: 230px; }
+    }
